@@ -10,7 +10,7 @@ var words = {
 	},
 	tr: {
 		definition: "tr",
-	}
+	},
 };
 
 document.getElementById("searchTerm").addEventListener("input", function () {
@@ -40,6 +40,10 @@ for (var i = 0; i < sortedWords.length; i++) {
 		var definition = words[this.innerHTML.toLowerCase()];
 		displayDefinition(definition);
 	});
+	listItem.addEventListener("touchstart", function () {
+		var definition = words[this.innerHTML.toLowerCase()];
+		displayDefinition(definition);
+	});
 	document.getElementById("wordListItems").appendChild(listItem);
 }
 
@@ -55,6 +59,10 @@ function displaySuggestions(suggestions) {
 		var listItem = document.createElement("li");
 		listItem.innerHTML = suggestion;
 		listItem.addEventListener("click", function () {
+			var definition = words[this.innerHTML.toLowerCase()];
+			displayDefinition(definition);
+		});
+		listItem.addEventListener("touchstart", function () {
 			var definition = words[this.innerHTML.toLowerCase()];
 			displayDefinition(definition);
 		});
