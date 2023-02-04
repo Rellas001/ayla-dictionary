@@ -29,6 +29,21 @@
 		width: min-content;
 	}
 
+	.container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.left-column {
+		width: 100%;
+		padding: 20px;
+	}
+
+	.right-column {
+		width: 100%;
+		padding: 20px;
+	}
+
 	* {
 		font-size: 1.2rem;
 	}
