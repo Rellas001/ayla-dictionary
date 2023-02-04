@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&display=swap");
 
 * {
-  font-family: "Arima Madurai", sans-serif;
+	font-family: "Arima Madurai", sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
@@ -27,6 +27,10 @@
 	#menuBtn {
 		display: block;
 		width: min-content;
+	}
+
+	* {
+		font-size: 1.2rem;
 	}
 }
 
@@ -80,4 +84,18 @@ button {
 
 #wordList.closed {
 	right: -250px;
+}
+
+.container {
+	display: flex;
+}
+
+.left-column {
+	width: 50%;
+	padding: 20px;
+}
+
+.right-column {
+	width: 50%;
+	padding: 20px;
 }
