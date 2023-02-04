@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My Custom Dictionary</title>
+		<title>Ayla's Dictionary</title>
 		<link rel="stylesheet" type="text/css" href="style.css" />
 	</head>
 	<body>
-		<header>
-			<h1>My Custom Dictionary</h1>
-			<button id="menuBtn">&#9776;</button>
-		</header>
-		<input type="text" id="searchTerm" placeholder="Search for a word..." />
-		<button id="searchBtn">Search</button>
-		<div id="wordDefinition"><i>definition will show up here</i></div>
-		<nav id="wordList">
-			<h2>Word List</h2>
-			<ul id="wordListItems"></ul>
-			<button id="closeBtn">Exit</button>
-		</nav>
+		<div class-="container">
+			<div class="left-column">
+				<header>
+					<h1>Ayla's Dictionary</h1>
+				</header>
+				<input
+					type="text"
+					id="searchTerm"
+					placeholder="Search for a word..."
+				/>
+				<ul id="suggestionList"></ul>
+				<button id="searchBtn">Search</button>
+				<div id="wordDefinition">
+					<i>definition will show up here</i>
+				</div>
+			</div>
+			<div class="right-column">
+				<nav id="wordList">
+					<ul id="wordListItems"></ul>
+				</nav>
+			</div>
+		</div>
 	</body>
 	<script type="text/javascript" src="script.js"></script>
 </html>
