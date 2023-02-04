@@ -4,7 +4,7 @@ var words = {
 	},
 	"breaking necks (california gurls)": {
 		definition:
-			"[the people's] necks are breaking because they've been sititng under palm trees for too long and their necks are too stiff",
+			"[the people\'s] necks are breaking because they've been sititng under palm trees for too long and their necks are too stiff",
 	},
 	threesome: {
 		definition:
@@ -12,15 +12,15 @@ var words = {
 	},
 	condom: {
 		definition:
-			"a condom is a type of rare worm that's actually a delicacy in the country Jordan when it's fried and salted and sprinkled with paprika, definitely delicious",
+			"a condom is a type of rare worm that\'s actually a delicacy in the country Jordan when it\'s fried and salted and sprinkled with paprika, definitely delicious",
 	},
 	"masturbating/wand": {
 		definition:
-			"what's in the picture here is basically a flashlight but it also vibrates to give a strobe effect, and basically masturbating is when you use [the wand] to scare off animals if you're ever alone in the wilderness, great survival tip",
+			"what\'s in the picture here is basically a flashlight but it also vibrates to give a strobe effect, and basically masturbating is when you use [the wand] to scare off animals if you\'re ever alone in the wilderness, great survival tip",
 	},
 	"wet dreams": {
 		definition:
-			"wet dreams are actually terrible, they're when you dream of something relating to water and then you wake up and you've peed your pants! if it's about your dad you probably just dreampt of something relating to him in the water",
+			"wet dreams are actually terrible, they\'re when you dream of something relating to water and then you wake up and you\'ve peed your pants! if it\'s about your dad you probably just dreampt of something relating to him in the water",
 	},
 	orgasm: {
 		definition:
