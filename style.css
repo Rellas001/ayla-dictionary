@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100&display=swap");
+
+* {
+  font-family: "Arima Madurai", sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+	header {
+		flex-direction: column;
+	}
+	#searchTerm,
+	button {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	#wordList {
+		top: auto;
+		left: -300px;
+		bottom: 0;
+		width: 100%;
+		height: 50%;
+	}
+	#wordList.open {
+		left: 0;
+	}
+
+	#menuBtn {
+		display: block;
+		width: min-content;
+	}
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px;
+}
+
+h1 {
+	margin: 0;
+}
+
+button {
+	padding: 12px 20px;
+	border-radius: 4px;
+	border: none;
+	background-color: #4caf50;
+	color: white;
+}
+
+#searchTerm,
+button {
+	margin: 20px;
+}
+
+#wordDefinition {
+	margin: 20px;
+	padding: 20px;
+	background-color: #f2f2f2;
+	border-radius: 4px;
+	text-align: center;
+}
+
+#wordList {
+	position: fixed;
+	top: 0;
+	right: -300px;
+	width: 250px;
+	height: 100%;
+	background-color: white;
+	padding: 20px;
+	box-shadow: 0 0 10px #ccc;
+	transition: right 0.3s ease-in-out;
+}
+
+#wordList.open {
+	right: 0;
+}
+
+#wordList.closed {
+	right: -250px;
+}
