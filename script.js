@@ -1,19 +1,28 @@
 var words = {
 	word1: {
 		definition: "def",
-		texts: [
-			{
-				text1: "a",
-			},
-			{
-				text2: "b",
-			},
-		],
 	},
+	word2: {
+		definition: "definition",
+	},
+	word3: {
+		definition: "meaning",
+	},
+	tr: {
+		definition: "tr",
+	}
 };
 
+document.getElementById("searchTerm").addEventListener("input", function () {
+	var searchTerm = this.value.toLowerCase();
+	var suggestions = Object.keys(words).filter(function (word) {
+		return word.includes(searchTerm);
+	});
+	displaySuggestions(suggestions);
+});
+
 document.getElementById("searchBtn").addEventListener("click", function () {
-	var searchTerm = document.getElementById("searchTerm").value;
+	var searchTerm = document.getElementById("searchTerm").value.toLowerCase();
 	var definition = words[searchTerm];
 	if (definition) {
 		displayDefinition(definition);
@@ -22,21 +31,13 @@ document.getElementById("searchBtn").addEventListener("click", function () {
 	}
 });
 
-document.getElementById("menuBtn").addEventListener("click", function () {
-	document.getElementById("wordList").classList.toggle("open");
-});
-
-document.getElementById("closeBtn").addEventListener("click", function () {
-	document.getElementById("wordList").classList.toggle("open");
-});
-
 var sortedWords = Object.keys(words).sort();
 for (var i = 0; i < sortedWords.length; i++) {
 	var word = sortedWords[i];
 	var listItem = document.createElement("li");
 	listItem.innerHTML = word;
 	listItem.addEventListener("click", function () {
-		var definition = words[this.innerHTML];
+		var definition = words[this.innerHTML.toLowerCase()];
 		displayDefinition(definition);
 	});
 	document.getElementById("wordListItems").appendChild(listItem);
@@ -44,12 +45,19 @@ for (var i = 0; i < sortedWords.length; i++) {
 
 function displayDefinition(definition) {
 	document.getElementById("wordDefinition").innerHTML = definition.definition;
-	document.getElementById("textsContainer").innerHTML = "";
-	for (var i = 0; i < definition.texts.length; i++) {
-		var text = definition.texts[i];
-		var textContainer = document.createElement("div");
-		textContainer.classList.add("textContainer");
-		textContainer.innerHTML = Object.values(text)[0];
-		document.getElementById("textsContainer").appendChild(textContainer);
+}
+
+function displaySuggestions(suggestions) {
+	var suggestionList = document.getElementById("suggestionList");
+	suggestionList.innerHTML = "";
+	for (var i = 0; i < suggestions.length; i++) {
+		var suggestion = suggestions[i];
+		var listItem = document.createElement("li");
+		listItem.innerHTML = suggestion;
+		listItem.addEventListener("click", function () {
+			var definition = words[this.innerHTML.toLowerCase()];
+			displayDefinition(definition);
+		});
+		suggestionList.appendChild(listItem);
 	}
 }
