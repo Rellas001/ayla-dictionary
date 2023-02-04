@@ -4,6 +4,11 @@
 	font-family: "Arima Madurai", sans-serif;
 }
 
+footer {
+	position: fixed;
+	bottom: 0;
+}
+
 @media only screen and (max-width: 600px) {
 	#wordDefinition {
 		width: 100%;
@@ -55,6 +60,12 @@
 	* {
 		font-size: 1.2rem;
 	}
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    font-size: small;
+  }
 }
 
 header {
