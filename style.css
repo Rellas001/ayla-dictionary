@@ -60,12 +60,6 @@ footer {
 	* {
 		font-size: 1.2rem;
 	}
-
-  footer {
-    position: fixed;
-    bottom: 0;
-    font-size: small;
-  }
 }
 
 header {
